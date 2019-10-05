@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+	<p>Before the script...</p>
+
+	<script src="json2.js"></script>
+
+	<script>
+		var jsonData = '{"family":[{"name":"Bruce","age":18,"sex":"male"},{"name":"Sherry","age":16,"sex":"female"}]}';
+		var jsonObj = JSON.parse(jsonData);
+		alert(jsonObj.family[0].name);	// Bruce
+		alert(jsonObj.family[1].age);	// 16
+
+		var team1 = new Array('Apple', 'Banana', 'Cherry');
+		var team2 = ['One', 'Two', 'Three'];
+		alert(team1[0]);
+		alert(team2[2]);
+
+		var somebody = new Object();
+		somebody.name = 'Bruce';
+		somebody.age = 18;
+		somebody.sex = 'male';
+
+		var someone = {'name': 'Marry',
+						'age': 16,
+						'sex': 'female'};
+
+		alert("somebody: " + somebody.name + "/" + somebody.age + "/" + somebody.sex);
+		alert("someone: " + someone.name + "/" + someone.age + "/" + someone.sex);
+	</script>
+
+	<p>...After the script.</p>
+
+</body>
+
+</html>
